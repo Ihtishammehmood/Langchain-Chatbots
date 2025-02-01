@@ -53,25 +53,25 @@ def display_msg(msg, author):
     st.chat_message(author).write(msg)
 
 def configure_llm():
-    available_llms = ["llama-3.2:1b", "llama-3.2:11b"]
+    available_llms = ["deepseek-r1", "llama-3.3:70b-versatile"]
     llm_opt = st.sidebar.radio(
         label="LLM",
         options=available_llms,
         key="SELECTED_LLM"
     )
 
-    if llm_opt == "llama-3.2:1b":
+    if llm_opt == "deepseek-r1":
         llm = ChatGroq(
             temperature=0.7,
             groq_api_key=groq_api_key,
-            model_name="llama-3.2-1b-preview",
+            model_name="deepseek-r1-distill-llama-70b",
             streaming=True
         )
-    elif llm_opt == "llama-3.2:11b":
+    elif llm_opt == "llama-3.3:70b-versatile":
         llm = ChatGroq(
             temperature=0.7,
             groq_api_key=groq_api_key,
-            model_name="llama-3.2-11b-text-preview",
+            model_name="llama-3.3-70b-versatile",
             streaming=True
         )
     return llm
