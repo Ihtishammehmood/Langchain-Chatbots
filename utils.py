@@ -53,25 +53,25 @@ def display_msg(msg, author):
     st.chat_message(author).write(msg)
 
 def configure_llm():
-    available_llms = ["llama-4-scout-17b", "kimi-k2"]
+    available_llms = ["gpt-oss-120b", "gpt-oss-20b"]
     llm_opt = st.sidebar.radio(
         label="LLM",
         options=available_llms,
         key="SELECTED_LLM"
     )
 
-    if llm_opt == "llama-4-scout-17b":
+    if llm_opt == "gpt-oss-120b":
         llm = ChatGroq(
             temperature=0.7,
             groq_api_key=groq_api_key,
-            model_name="meta-llama/llama-4-scout-17b-16e-instruct",
+            model_name="openai/gpt-oss-120b",
             streaming=True
         )
-    elif llm_opt == "kimi-k2":
+    elif llm_opt == "gpt-oss-20b":
         llm = ChatGroq(
             temperature=0.7,
             groq_api_key=groq_api_key,
-            model_name="moonshotai/kimi-k2-instruct",
+            model_name="openai/gpt-oss-20b",
             streaming=True
         )
     return llm
