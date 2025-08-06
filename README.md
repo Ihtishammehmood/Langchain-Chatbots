@@ -1,6 +1,6 @@
 # Streamlit LLM Application
 
-This application leverages cutting-edge latest LLaMA models (3.2 1B and 3.2 11B) to provide powerful language processing capabilities, enabling diverse conversational experiences and interactions with various data sources.
+This application leverages  latest `open source` models to test the performance on different tasks
 
 ## Features
 
@@ -24,7 +24,7 @@ This application leverages cutting-edge latest LLaMA models (3.2 1B and 3.2 11B)
 
 ## Technical Overview
 
-- **LLaMA Models:** The application integrates the LLaMA 3.2 series models, ranging from 1B to 11B parameters, enabling both lightweight and large-scale language processing.
+- **Open Source Models:** The application integrates latest state of the art open source models to test the performance on different tasks.
   
 - **Streamlit Integration:** A user-friendly, web-based interface built with Streamlit, ensuring ease of use, accessibility, and an intuitive layout for various conversational tasks.
 
